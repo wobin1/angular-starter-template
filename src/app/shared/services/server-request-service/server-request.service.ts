@@ -21,18 +21,11 @@ export class ServerRequestService {
     }
  
     getToken(){
-     this.token = this.store.getStoredData('mtlToken')
+     this.token = this.store.getStoredData('token name')
        
    }
  
-    pay(body:object):Observable<any>{
- 
-     return this.http.post('https://api.paystack.co/transaction/initialize', body, {
-       headers: new HttpHeaders({
-        
-       })
-     },)
-    }
+
  
     paginate(url:string){
      return this.http.get(url)
