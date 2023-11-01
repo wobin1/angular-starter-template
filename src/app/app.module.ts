@@ -7,21 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    MaterialModule,
-    ToastrModule.forRoot(),
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MaterialModule,
+        ToastrModule.forRoot(),
+        SharedModule
+    ]
 })
 export class AppModule { }
