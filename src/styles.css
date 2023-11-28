@@ -3,5 +3,82 @@
 /* regular style toast */
 @import 'ngx-toastr/toastr';
 
+@font-face {
+    font-family: "OpenSans";
+    src: url('/assets/fonts/static/OpenSans_Condensed-Medium.ttf');
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; 
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    }
+
+
+:root {
+    --primary-color1: hsl(120, 2%, 11%);
+    --primary-color2: hsl(120, 2%, 21%);
+    --primary-color3: hsl(120, 2%, 31%);
+    --primary-color4: hsl(120, 2%, 41%);
+    --primary-color5: hsl(120, 2%, 51%);
+    --primary-color6: hsl(120, 2%, 61%);
+    --primary-color7: hsl(120, 2%, 71%);
+    --primary-color8: hsl(120, 2%, 81%);
+    --primary-color9: hsl(120, 2%, 91%);
+    --bg-color: #eeefed;
+    --white: hsl(100, 100%, 100%);
+
+
+    --secondary-color: #1b9d57;
+
+    /* size  */
+    --size1: 4px;
+    --size2: 8px;
+    --size3: 12px;
+    --size4: 16px;
+    --size5: 24px;
+    --size6: 32px;
+    --size7: 48px;
+    --size8: 64px;
+    --size9: 96px;
+    --size10: 128px;
+    --size11: 192px;
+
+    /* Font */
+    --font-family-sans: 'Opensans';
+}
+
+
+
+/* Utility classes */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

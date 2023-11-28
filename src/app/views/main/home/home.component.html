@@ -1,0 +1,23 @@
+
+<div class="container main-section-layout flex-center">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let row of startups_data.data">
+           <app-card startup_logo="/assets/images/logo/afriglobal.png"
+                        startup_name={{row.startup_name}}
+                        industry={{row.startup_industry}}
+                        location={{row.startup_location}}
+                        founded_in={{row.founded_in}}
+                        description={{row.startup_description}}
+                        startup_id={{row.id}}></app-card>
+        </div>
+
+        <!-- Repeat the above card structure for the remaining startups -->
+
+        <!-- Repeat for a total of 10 cards -->
+
+    </div>
+</div>
+
+
+
+

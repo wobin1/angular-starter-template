@@ -8,6 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from "./shared/shared.module";
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,9 @@ import { SharedModule } from "./shared/shared.module";
         FlexLayoutModule,
         MaterialModule,
         ToastrModule.forRoot(),
-        SharedModule
+        SharedModule,
+        AppRoutingModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }

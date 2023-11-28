@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private toastr: ToastrService){}
 
   ngOnInit(){
-    this.showSuccess()
+    // this.showSuccess()
   }
 
 

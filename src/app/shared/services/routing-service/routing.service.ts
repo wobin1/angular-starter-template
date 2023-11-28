@@ -10,6 +10,6 @@ export class RoutingService {
 
 
   route(page:string){
-    
+    this.router.navigateByUrl(page)
   }
 }

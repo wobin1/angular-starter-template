@@ -1,0 +1,64 @@
+
+.registration-page-layout {
+    background-color: var(--primary-color9);
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+@media(min-width: 450px){
+
+    .registration-page-layout {
+        background-color: var(--primary-color9);
+        min-height: 100vh;
+        height: auto;
+        margin: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+}
+
+.registration-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: auto;
+    width: min(800px, 100% - 1rem);
+    height: auto;
+}
+
+.registration-container h2 {
+    text-align: center;
+    color: var(--primary-color1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: var(--size4);
+    margin-top: var(--size2);
+    cursor: pointer;
+}
+
+.forgot-password a:hover {
+    color: var(--primary-color6);
+}
+
+.have-account a {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+

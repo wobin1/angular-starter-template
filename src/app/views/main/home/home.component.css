@@ -1,0 +1,6 @@
+.main-section-layout {
+    
+    margin: auto;
+    width: min(1000px, 100%);
+    margin-top: var(--size7);
+}

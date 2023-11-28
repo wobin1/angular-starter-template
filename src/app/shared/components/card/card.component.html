@@ -1,0 +1,49 @@
+<div class="card startup-card">
+    <div class="card-header flex-center">
+        <div class="image">
+            <img src={{startup_logo}} alt="">
+        </div>
+    </div>
+    
+    <div class="card-body">
+
+        <div>
+            <div class="startup-info flex-start">
+                <i class="fas fa-industry "></i> 
+                <span class="industry"> {{industry}}</span>
+            </div>
+            <div class="startup-info">
+                <h2 class="name">{{startup_name}}</h2>
+            </div>
+    
+    
+            <div class="startup-info description flex-start">
+                <i class="fas fa-align-left"></i> 
+                <span class="description">{{description}}</span>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="startup-info flex-start">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    <span class="location"> {{location}}</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="startup-info flex-start">
+                    <i class="fas fa-calendar-alt"></i> 
+                    <span class="founded"> {{founded_in}}</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <div class="card-footer text-muted">
+        <button class="btn view-profile-btn" (click)="viewDetail('startup/' + startup_id)">View Profile</button>
+    </div>
+</div>

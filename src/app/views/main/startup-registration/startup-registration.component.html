@@ -1,0 +1,242 @@
+<div class="startup_registration-page-layout ">
+
+  <div class="startup_registration-container" *ngIf="stage == 1">
+    <h2>Register</h2>
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="startup_name">Startup Name</label>
+                    <input
+                      [(ngModel)]="startup_registration_data.startup_name"
+                      name="startup_name"
+                      #startup_name="ngModel"
+                      type="text"
+                      class="form-control"
+                      id="startup_name"
+                      placeholder="Enter your startup name"
+                      required
+                    />
+                    <span
+                      *ngIf="startup_name.invalid && startup_name.touched"
+                      style="color: red; font-size: 14px"
+                      >*this.field is required</span
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="startup_email">Startup Email</label>
+                    <input
+                      [(ngModel)]="startup_registration_data.startup_email"
+                      name="startup_email"
+                      #startup_email="ngModel"
+                      type="text"
+                      class="form-control"
+                      id="startup_email"
+                      placeholder="Enter your startup email"
+                      required
+                    />
+                    <span
+                      *ngIf="startup_email.invalid && startup_email.touched"
+                      style="color: red; font-size: 14px"
+                      >*this.field is required</span
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="startup_location">Startup Location</label>
+                    <input
+                      [(ngModel)]="startup_registration_data.startup_location"
+                      name="startup_location"
+                      #startup_location="ngModel"
+                      type="text"
+                      class="form-control"
+                      id="startup_location"
+                      placeholder="Enter your startup location"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <div>
+                      <label for="">Founder list</label>
+                    </div>
+                    <span *ngFor="let founder of founder_list" class="founder"> {{founder}},</span>
+                  </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="startup_industry">Startup Industry</label>
+                    <input
+                      [(ngModel)]="startup_registration_data.startup_industry"
+                      name="startup_industry"
+                      #startup_industry="ngModel"
+                      type="startup_industry"
+                      class="form-control"
+                      id="startup_industry"
+                      placeholder="Enter your startup industry"
+                      required
+                    />
+                    <span
+                      *ngIf="startup_industry.invalid && startup_industry.touched"
+                      style="color: red; font-size: 14px"
+                      >*this.field is required</span
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Founded on:</label>
+                    <input 
+                      [(ngModel)]="startup_registration_data.founded_in"
+                      name="founded_in"
+                      #founded_in="ngModel"
+                      type="date" 
+                      class="form-control" 
+                      id="date" 
+                      placeholder="Enter a date">
+                  </div>
+                  <div class="form-group">
+                    <label for="startup_description">Startup Description</label>
+                    <textarea
+                      [(ngModel)]="startup_registration_data.startup_description"
+                      name="startup_description"
+                      #startup_description="ngModel"
+                      autocomplete="current-password"
+                      type="startup_description"
+                      class="form-control"
+                      id="startup_description"
+                      placeholder="Enter startup description"
+                      rows="3"
+                      required
+                    >
+                    </textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="startup_location">Add Founder</label>
+                    <input
+                      [(ngModel)]="startup_registration_data.founder"
+                      name="founder"
+                      #startup_location="ngModel"
+                      type="text"
+                      class="form-control"
+                      id="founder"
+                      placeholder="Enter your startup founder"
+                      required
+                    />
+                  </div>
+
+                  <div class="flex-end">
+                    <div class="add-icon flex-center" (click)="addToFounder()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>
+                      Add
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+      <button
+        type=""
+        class="btn btn-success btn-block"
+        (click)="nextStage()"
+      >
+        <span *ngIf="!loader">Next</span>
+        <span *ngIf="loader"><app-loader></app-loader></span>
+      </button>
+    </form>
+  </div>
+
+
+  <div class="startup_registration-container" *ngIf="stage == 2">
+    <h2>Additional Information</h2>
+    <form>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label for="startup_description">{{question1}}</label>
+                  <textarea
+                    [(ngModel)]="startup_registration_data.startup_description"
+                    name="startup_description"
+                    #startup_description="ngModel"
+                    autocomplete="current-password"
+                    type="startup_description"
+                    class="form-control"
+                    id="startup_description"
+                    placeholder="Enter startup description"
+                    rows="3"
+                    required
+                  >
+                  </textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="startup_description">{{question2}}</label>
+                <textarea
+                  [(ngModel)]="startup_registration_data.startup_description"
+                  name="startup_description"
+                  #startup_description="ngModel"
+                  autocomplete="current-password"
+                  type="startup_description"
+                  class="form-control"
+                  id="startup_description"
+                  placeholder="Enter startup description"
+                  rows="3"
+                  required
+                >
+                </textarea>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="startup_description">{{question3}}</label>
+                <textarea
+                  [(ngModel)]="startup_registration_data.startup_description"
+                  name="startup_description"
+                  #startup_description="ngModel"
+                  autocomplete="current-password"
+                  type="startup_description"
+                  class="form-control"
+                  id="startup_description"
+                  placeholder="Enter startup description"
+                  rows="3"
+                  required
+                >
+                </textarea>
+              </div>
+            </div>
+
+
+        </div>
+
+      <button
+        type=""
+        class="btn btn-success btn-block"
+        (click)="nextStage()"
+      >
+        <span *ngIf="!loader">Register</span>
+        <span *ngIf="loader"><app-loader></app-loader></span>
+      </button>
+
+    </form>
+  </div>
+
+    <div class="startup_registration-container" *ngIf="stage == 3">
+      <button
+        type=""
+        class="btn btn-success btn-block"
+        (click)="register('auth/login')"
+      >
+        <span *ngIf="!loader">Register</span>
+        <span *ngIf="loader"><app-loader></app-loader></span>
+        </button>
+      </div>
+    
+
+</div>

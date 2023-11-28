@@ -1,0 +1,53 @@
+
+.login-section-layout {
+    background-color: var(--primary-color9);
+    height: 100vh;
+    margin: 0;
+    padding-top: 3rem;
+}
+
+@media(min-width: 450px){}
+
+.login-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: auto;
+    width: min(500px, 100% - 1rem);
+}
+
+@media(min-width: 450px){
+   
+}
+
+.login-container h2 {
+    text-align: center;
+    color: var(--primary-color1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: var(--size4);
+    margin-top: var(--size2);
+    cursor: pointer;
+    font-size: var(--size4);
+}
+
+.forgot-password a:hover {
+    color: var(--secondary-color);
+    
+}
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.no-account a {
+    color: var(--secondary-color);
+    cursor: pointer;
+}

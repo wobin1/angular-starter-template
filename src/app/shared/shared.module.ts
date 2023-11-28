@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { MainComponent } from './components/layout/main/main.component';
+import { AuthComponent } from './components/layout/auth/auth.component';
+import { RouterModule } from '@angular/router';
+import { DetailPageComponent } from './components/detail-page/detail-page.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -10,15 +15,23 @@ import { LoaderComponent } from './components/loader/loader.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LoaderComponent
+    LoaderComponent,
+    MainComponent,
+    AuthComponent,
+    DetailPageComponent,
+    CardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     LoaderComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoaderComponent,
+    DetailPageComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }

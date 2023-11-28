@@ -9,7 +9,7 @@ import { LocalStorageService } from '../local-storage-service/local-storage.serv
 })
 export class ServerRequestService {
 
-  baseUrl = "";
+  baseUrl = "http://127.0.0.1:8000/api/v1/";
   token:any;
 
 
@@ -39,6 +39,10 @@ export class ServerRequestService {
        })
      },)
     }
+
+    auth(url:string, body:object):Observable<any>{
+      return this.http.post(this.baseUrl + url, body)
+     }
   
     get(url:string):Observable<any>{
       return this.http.get(this.baseUrl + url)

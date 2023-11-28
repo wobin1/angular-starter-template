@@ -1,0 +1,63 @@
+
+<div class="profile-container">
+    <div class="card-header flex-start-center">
+        <h1>{{detail_title}}</h1>
+    </div>
+
+   <div class="detail">
+        <div class="profile-info">
+            <div class="description">
+                <p><span class="sub-title">Brief Description:</span> {{description}}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p><span class="sub-title">Industry:</span> {{industry}}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><span class="sub-title">Location:</span> {{location}}</p>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <p><span class="sub-title">Founders:</span> <span *ngFor="let row of founders">&nbsp; {{row}},&nbsp; </span></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p><span class="sub-title">Founded In:</span> {{founded_in}}</p>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <div class="profile-info">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p><span class="sub-title">Company Website:</span> <br> <a href={{company_website}} target="_blank">{{company_website}}</a></p>
+                </div>
+                <div class="col-md-6">
+                    <p><span class="sub-title">Company Email:</span> <br> {{company_email}}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><span class="sub-title">Company Phone:</span> <br> {{company_phone_number}}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><span class="sub-title">Linked Profile:</span> {{company_linkedin}}</p>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Add additional information as needed -->
+        </div>
+        <div class="profile-info" *ngFor="let row of company_aditional_info">
+            <p><span class="sub-title">{{company_aditional_info}}.</span></p>
+        </div>
+
+
+        <a href="#" class="btn ">Back to Startup List</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,56 @@
+/* Profile styles */
+.profile-container {
+    max-width: 800px;
+    margin: 70px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.detail {
+    padding: var(--size5) var(--size7) var(--size5) var(--size7);
+}
+
+.profile-container h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    margin-bottom: var(--size5);
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    font-weight: bold;
+}
+
+
+.card-header {
+    height: 80px;
+}
+
+p {
+    font-size: var(--size4);
+    color: var(--primary-color5);
+    line-height: var(--size5);
+}
+
+.sub-title {
+    color: var(--primary-color1);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: var(--size4);
+}
+
+.description {
+    margin-bottom: var(--size6);
+}
+
+.btn {
+    background-color: var(--primary-color1);
+    color: var(--white);
+}
